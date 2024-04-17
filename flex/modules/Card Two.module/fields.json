@@ -1,0 +1,34 @@
+[ {
+  "id" : "768660fe-9ab8-98bd-fe8b-23c3787b9140",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<svg xmlns=\"http://www.w3.org/2000/svg\" data-name=\"Layer 1\" viewBox=\"0 0 24 24\" id=\"information-sign\"><path d=\"M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z\" fill=\"#e6b978\"></path></svg>"
+}, {
+  "id" : "649e6b8f-2014-ffa8-6850-a79173f106d8",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Alignement avec lesparties prenantes"
+}, {
+  "id" : "e9326bd0-3b9b-0b68-61d4-b8e94a48fcb7",
+  "name" : "text_field_1",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "50%"
+} ]

@@ -1,0 +1,91 @@
+{% set total_two = request.query_dict.total_two | int %}
+{% if total_two <= 39 %}
+{% set dynamic_class = 'class-for-20' %}
+{% elif total_two <= 79 %}
+{% set dynamic_class = 'class-for-50' %}
+{% elif total_two <= 100 %}
+{% set dynamic_class = 'class-for-80' %}
+{% else %}
+{% set dynamic_class = 'default-class' %}
+{% endif %}
+
+<div class="card-first">
+  <div class="card-text card-svg-2">
+    <p class="{{dynamic_class}}">
+      {{ module.richtext_field }}
+    </p>
+    <span>{{ module.text_field }}</span>
+  </div>
+  <div class="card-perform">
+    <h3>
+      {{ total_two >= 100 ? 100 : total_two || 0 }}%
+    </h3>
+    <progress max="100" class="{{dynamic_class}}" value="{{ total_two }}"></progress>
+  </div>
+</div>
+{% require_css %}
+<style>
+  {% scope_css %}
+  progress {
+    display: block; /* default: inline-block */
+    padding: 1px;
+    border: 0 none;
+    background: #fae6e4;
+    border-radius: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    width: 84%;
+  }
+  progress::-moz-progress-bar {
+    border-radius: 12px;
+    /*     background: #d17531; */
+  }
+  /* webkit */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    progress {
+      height: 10px;
+    }
+  }
+  progress::-webkit-progress-bar {
+    background: transparent;
+  }  
+  progress::-webkit-progress-value {  
+    border-radius: 12px;
+    /*     background: #d17531; */
+  } 
+/*   .card-svg-2 svg {
+    background-color: #fff0c7;
+  } */
+  .class-for-20 {
+    background: #fae6e4;
+    border-radius: 50px;
+    display: flex;
+  }
+  .class-for-20::-webkit-progress-value {  
+    background: #ce3026;
+  } 
+  .class-for-50 {
+    background-color: #fceec5;
+    border-radius: 50px;
+    display: flex;
+  }
+  .class-for-50::-webkit-progress-value {  
+    background: #d17531;
+  } 
+  .class-for-80 {
+    background: #d7fce5;
+    border-radius: 50px;
+    display: flex;
+  } 
+  .class-for-80::-webkit-progress-value {  
+    background: #179159;
+  }  
+  .default-class {
+    background: #d7fce5;
+    border-radius: 50px;
+    display: flex;
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}

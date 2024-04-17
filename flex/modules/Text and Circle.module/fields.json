@@ -1,0 +1,74 @@
+[ {
+  "id" : "929c3cc1-d0c2-f396-8393-7d4dcb56cfb3",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>Vos résultats</h2>\n<p>Nous vous félicitons d'avoir pris le temps d'évaluer la maturité de votre équipe de développement. Nous avons analysé vos réponses et compilé quelques recommandations pour vous aider à saisir les opportunités d'améliorer vos performances ainsi qu'augmenter l'impact sur votre organisation.</p>\n<p><br>Votre score à droite représente la moyenne de trois axes de performance en matière de développement logiciel: votre capacité de mesurer la performance de l'équipe, la<br>communication et alignement avec les parties prenantes, et la prévisibilité de vos opérations. Ces éléments fondamentaux vous donnent un aperçu rapide de la performance globale de votre équipe et de son impact sur l'organisation.</p>"
+}, {
+  "id" : "32523518-04fb-67a7-d4eb-736856e5be68",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "e7354a13-de86-c741-860c-bfb242437083",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://45756851.fs1.hubspotusercontent-na1.net/hubfs/45756851/Facebook.webp",
+    "alt" : "Facebook",
+    "loading" : "lazy",
+    "width" : 33,
+    "height" : 33,
+    "max_width" : 33,
+    "max_height" : 33
+  }
+}, {
+  "id" : "87c99b42-36af-ab80-9c5f-7dc85f7963ec",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Receiver man guide"
+}, {
+  "id" : "60bbaa8b-544b-5b3c-bf81-275a76fa674d",
+  "name" : "text_field_1",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Lorem upsum"
+} ]

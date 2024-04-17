@@ -1,0 +1,111 @@
+.first-section {
+  display: flex;
+  align-items: center;
+}
+.first-text {
+  max-width: 600px;
+}
+.percent svg circle {
+  width: 100%;
+}
+.percent {
+  position: relative;
+  margin-left: auto;
+}
+
+.percent svg {
+  width: 200px;
+  height: 200px;
+  transform: rotate(268deg);
+}
+
+.percent svg circle {
+  height: 100%;
+  fill: none;
+/*   stroke: #f0f0f0; */
+  stroke-width: 18;
+  stroke-linecap: round;
+}
+
+.percent svg circle:last-of-type {
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: calc(565.48 - (565.48 * var(--percent)) / 100);
+/*   stroke: #a0acbf; */
+}
+.total-for-20 svg circle {
+  stroke: #fae6e4;
+}
+.total-for-50 svg circle {
+  stroke: #fceec5;
+}
+.total-for-80 svg circle {
+  stroke: #d7fce5;
+}
+.total-for-20  svg circle:last-of-type {
+  stroke: #ce3026;
+}
+.total-for-50  svg circle:last-of-type {
+  stroke: #d17531;
+}
+.total-for-80  svg circle:last-of-type {
+  stroke: #179159;
+}
+.default-total  svg circle:last-of-type {
+  stroke: #179159;
+}
+.percent p {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.overall {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  text-align: center;
+}
+.overall span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #a0acbf;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  max-width: 112px;
+  white-space: nowrap;
+  width: 131px;
+  margin: auto;
+}
+.first-btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  border: 1px solid #a0acbf;
+  max-width: max-content;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.first-btn span {
+  color: black;
+  font-size: 16px;
+}
+.first-btn img {
+  width: 25px;
+}
+@media only screen and (max-width: 480px) {
+  .percent {
+    margin-top: 40px;
+    display: flex;
+  }
+  .first-section {
+    display: block;
+  }
+  .percent svg {
+    margin: auto;
+  }
+}

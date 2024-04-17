@@ -1,0 +1,46 @@
+[ {
+  "id" : "2979ffca-c758-fd08-a80e-b875ac497092",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<svg xmlns=\"http://www.w3.org/2000/svg\" data-name=\"Layer 1\" viewBox=\"0 0 24 24\" id=\"information-sign\"><path d=\"M12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Zm0-8.5a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0v-3A1,1,0,0,0,12,11.5Zm0-4a1.25,1.25,0,1,0,1.25,1.25A1.25,1.25,0,0,0,12,7.5Z\" fill=\"#77ae8f\"></path></svg>"
+}, {
+  "id" : "ca599044-66d1-c80b-ff8a-4816f99cb87e",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Mesure de la performance de l'équipe"
+}, {
+  "id" : "3ec50f02-ac84-d634-1771-bf4baa14d320",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "5483e816-0c20-2c4d-bee5-3daedf8e513e",
+  "name" : "text_field_1",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "80%"
+} ]

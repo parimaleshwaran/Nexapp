@@ -1,0 +1,56 @@
+{% set total = request.query_dict.total | int %}
+
+{% if total <= 39 %}
+{% set dynamic_class = 'total-for-20' %}
+{% elif total <= 79 %}
+{% set dynamic_class = 'total-for-50' %}
+{% elif total <= 100 %}
+{% set dynamic_class = 'total-for-80' %}
+{% else %}
+{% set dynamic_class = 'default-total' %}
+{% endif %}
+
+<div class="first-section">
+  <div class="first-text">
+    <div class="">
+      {{ module.richtext_field }}
+    </div>
+    <div class="first-btn">
+      {% set href = module.link_field.url.href %}
+      {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="#Section"
+         {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.link_field.rel %}rel="{{ module.link_field.rel|escape_attr }}"{% endif %}
+         >
+        {% if module.image_field.src %}
+        {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
+        {% if module.image_field.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% elif module.image_field.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.image_field.max_width|escape_attr }}" height="{{ module.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading|escape_attr }}"' : '' %}
+        <img src="{{ module.image_field.src|escape_url }}" alt="{{ module.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+        <span>
+          {{ module.text_field }}
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="percent {{dynamic_class}}">
+    <svg>
+      <circle cx="100" cy="100" r="90"></circle>
+      <circle cx="100" cy="100" r="90" style="--percent: {{ total >= 100 ? 100 : total || 0 }}"></circle>
+    </svg>
+    <div class="overall">
+      <span>
+        {{ module.text_field_1 }}
+      </span>
+      <p>{{ total >= 100 ? 100 : total || 0 }}%</p>
+    </div>
+  </div>
+</div>
+

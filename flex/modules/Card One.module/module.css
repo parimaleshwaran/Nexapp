@@ -1,0 +1,60 @@
+.card-first {
+  background: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 9px;
+  padding: 30px;
+  min-height: 228px;
+  position: relative;
+}
+.card-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.class-for-20,.class-for-50,.class-for-80,.default-class {
+  margin-bottom: 0;
+}
+.class-for-20 svg {
+  background: #fae6e4;
+}
+.class-for-20 svg path {
+  fill:#d58a89;
+}
+.class-for-50 svg {
+  background-color: #fceec5;
+}
+.class-for-50 svg path {
+  fill: #e6b978;
+}
+.class-for-80 svg {
+  background: #d7fce5;
+} 
+.class-for-80 svg path {
+  fill: #77ae8f;
+}
+.default-class svg path {
+  fill: #77ae8f;
+}
+.card-text svg {
+  width: 40px;
+  padding: 10px;
+  /*   background: #fae6e4; */
+  border-radius: 50px;
+}
+.card-text span {
+  font-size: 20px;
+  color: black;
+}
+.card-perform {
+  padding-top: 40px;
+}
+.card-perform h3 {
+  font-family: Lato, sans-serif;
+  margin-bottom: 20px;
+  color: #000;
+}
+@media only screen and (max-width: 480px) {
+  .card-first {
+    min-height: auto;
+  }
+}
